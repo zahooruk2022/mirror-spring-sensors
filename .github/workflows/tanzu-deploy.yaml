@@ -11,14 +11,14 @@ jobs:
       - name: Log in to Container Registry
         uses: docker/login-action@v3
         with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          registry: demo.goharbor.ioghcr.io
+          username: zalam 
+          password: "Tanzu123@"
       - name: Deploy application to Tanzu Platform
         uses: cpage-pivotal/tanzu-deploy-action@v1.3
         with:
           tanzu_api_token: ${{ secrets.TanzuApiToken }}
-          container_registry: ghcr.io/${{ github.actor }}/sensors-workshop
+          container_registry: demo.goharbor.io/zalam/sensors-workshop
           buildPlanSource: custom-build-plan
           project: workshop01
-          space: corby-space
+          space: zahoor-space
