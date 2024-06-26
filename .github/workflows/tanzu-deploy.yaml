@@ -12,12 +12,12 @@ jobs:
         uses: docker/login-action@v3
         with:
           registry: demo.goharbor.io
-          username: zalam 
-          password: "Tanzu123@"
+          username: 
+          password: 
       - name: Deploy application to Tanzu Platform
         uses: cpage-pivotal/tanzu-deploy-action@v1.3
         with:
-          tanzu_api_token: "1pZI-QhoPsx1Mxp_faGuq7U1gMS2kfYPI1KslPwRRV5WzKuIHPJhfUxQ03jz-ITA" 
+          tanzu_api_token: 
           container_registry: demo.goharbor.io/zalam/sensors-workshop
           buildPlanSource: custom-build-plan
           project: workshop01
