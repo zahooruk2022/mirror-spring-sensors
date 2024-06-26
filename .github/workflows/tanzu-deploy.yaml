@@ -11,7 +11,7 @@ jobs:
       - name: Log in to Container Registry
         uses: docker/login-action@v3
         with:
-          registry: demo.goharbor.ioghcr.io
+          registry: demo.goharbor.io
           username: zalam 
           password: "Tanzu123@"
       - name: Deploy application to Tanzu Platform
